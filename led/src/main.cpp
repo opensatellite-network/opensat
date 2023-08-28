@@ -9,3 +9,22 @@
  * 
  */
 
+#include <Arduino.h>
+
+#define LED_PIN 9
+
+void setup() 
+{
+    Serial.begin(9600);
+    pinMode(LED_PIN, OUTPUT);
+}
+
+void loop()
+{
+    digitalWrite(LED_PIN, HIGH);
+    Serial.println("ON");
+    delay(500);
+    digitalWrite(LED_PIN, LOW);
+    Serial.println("OFFF");
+    delay(500);
+}
