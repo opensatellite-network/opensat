@@ -11,20 +11,24 @@
 
 #include <Arduino.h>
 
-#define LED_PIN 9
+#define LED_PIN 9 // LED_PIN
 
-void setup() 
-{
-    Serial.begin(9600);
+/// @breif: setup
+void setup() {
+    Serial.begin(9600);        
     pinMode(LED_PIN, OUTPUT);
 }
 
-void loop()
-{
-    digitalWrite(LED_PIN, HIGH);
-    Serial.println("ON");
-    delay(500);
-    digitalWrite(LED_PIN, LOW);
-    Serial.println("OFFF");
-    delay(500);
-}
+/// @brief loop
+void loop()  {
+	
+  	digitalWrite(LED_PIN, HIGH);   
+
+  	Serial.println ("On");  
+  	delay(500);                       
+    
+  	digitalWrite(LED_PIN, LOW);    
+  	Serial.println ("Off");
+
+  	delay(500);                       
+} 
